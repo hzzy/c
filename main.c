@@ -1,6 +1,14 @@
 #include <stdio.h>
 
+
+void log(char *info) {
+#ifdef DEBUG
+    printf("log info:%s\n", info);
+#endif
+}
+
 int main() {
-    printf("Hello, World!\n");
-    return 0;
+    log("this is start...");
+    printf("this is main method!!\n");
+    log("this is end...");
 }
